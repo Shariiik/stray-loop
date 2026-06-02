@@ -6,10 +6,10 @@
 <hr />
 
 ## 🌟 About The Project
-This repository provides everything you need to create seamless live wallpapers from the game *Stray* on Windows. It includes a custom UE4SS Lua script to control the game scene and pre-compiled `.pak` modifications (featuring a unique ginger cat with a white chest/belly texture to replace the default model).
+This repository provides everything you need to create seamless live wallpapers from the game *Stray* on Windows. It includes a custom UE4SS Lua script to control the game scene and pre-compiled `.pak` modifications that offer two lobby background variations: with the main "Stray" logo and a completely clean version without the text.
 
 ## 📥 Downloads (.pak mods)
-You can download the pre-compiled custom texture packages in the **[Releases]** section of this repository. 
+You can download the two pre-compiled `.pak` archives (background variations with and without the text) in the **[Releases]** section of this repository. 
 Place the downloaded `_P.pak` files into your game directory:
 `Stray\HK_project\Content\Paks\~mods\`
 
