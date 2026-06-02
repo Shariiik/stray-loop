@@ -8,13 +8,13 @@ Windows utility and UE4SS Lua script to transform the Stray main menu into a per
 
 **stray-loop** is a lightweight utility designed for Windows users and modders. It automates the process of hiding the UI, resetting cinematic animations, and managing audio in the game *Stray* to create a seamless live wallpaper background. 
 
-The repository includes a custom UE4SS Lua script to control the game scene and pre-compiled `.pak` modifications that offer two lobby background variations: with the main "Stray" neon logo and a completely clean version without the text.
+The repository includes a custom UE4SS Lua script to control the game scene and pre-compiled `.pak` modification that offer lobby background variation with completely clean version (without the text).
 
 ## 🚀 How to Use (v1.0.0)
 
 **For Windows Users:**
 The easiest way to set up the perfect background loop:
-1. Download the script and `.pak` mods from the repository.
+1. Download the script and `.pak` mod from the repository.
 2. Place the files in your game directory.
 3. Press `F1` in the main menu to activate the clean loop!
 
@@ -59,7 +59,7 @@ Execute the setup by placing the Lua script directly into your game directory to
 
 ## 📥 Downloads (.pak mods)
 
-You can download the two pre-compiled `.pak` archives (background variations with and without the text) in the **[Releases]** section of this repository. 
+You can download `.pak` archive (without the text) in the **[Releases]** section of this repository. 
 
 Place the downloaded `_P.pak` files into your game directory:
 `Stray\HK_project\Content\Paks\~mods\`
