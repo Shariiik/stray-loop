@@ -1,36 +1,77 @@
-<div align="center">
-  <h1>🐈 Stray Live Wallpaper Creator (Windows)</h1>
-  <p>A lightweight toolset for modifying the Stray main menu into a perfect, UI-free live wallpaper loop. Inspired by and adapted from the Linux project <a href="https://github.com/Bqrry4/sddm-stray">sddm-stray</a>.</p>
-</div>
+# stray-loop
 
-<hr />
+Windows utility and UE4SS Lua script to transform the Stray main menu into a perfect, UI-free live wallpaper loop.
 
-## 🌟 About The Project
-This repository provides everything you need to create seamless live wallpapers from the game *Stray* on Windows. It includes a custom UE4SS Lua script to control the game scene and pre-compiled `.pak` modifications that offer two lobby background variations: with the main "Stray" logo and a completely clean version without the text.
+---
+
+## Overview
+
+**stray-loop** is a lightweight utility designed for Windows users and modders. It automates the process of hiding the UI, resetting cinematic animations, and managing audio in the game *Stray* to create a seamless live wallpaper background. 
+
+The repository includes a custom UE4SS Lua script to control the game scene and pre-compiled `.pak` modifications that offer two lobby background variations: with the main "Stray" neon logo and a completely clean version without the text.
+
+## 🚀 How to Use (v1.0.0)
+
+**For Windows Users:**
+The easiest way to set up the perfect background loop:
+1. Download the script and `.pak` mods from the repository.
+2. Place the files in your game directory.
+3. Press `F1` in the main menu to activate the clean loop!
+
+### Key Features
+
+| Feature | Description | Technical Implementation |
+| :--- | :--- | :--- |
+| **Zero Console / UI** | Completely text-free, clean graphical view | UE4SS Lua Script |
+| **Background Variations** | Two lobby options (with and without logo) | Unreal Engine `.pak` patches |
+| **Seamless Audio** | Carefully restarts background music and wind | `AudioComponent` engine hooks |
+| **Perfect Loop** | Instantly resets camera and character animations | `LevelSequencePlayer` tracking |
+
+---
+
+## Quick Start
+
+### Prerequisites
+
+- The game *Stray* installed on Windows
+- UE4SS (Unreal Engine 4/5 Scripting System)
+
+### Installation
+
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/Shariiik/stray-loop.git
+cd stray-loop
+```
+
+### Usage (Script Setup)
+
+Execute the setup by placing the Lua script directly into your game directory to enable hotkeys:
+
+1. Install **UE4SS** in your `Stray\Hk_project\Binaries\Win64\` directory.
+2. Move the `Scripts\main.lua` file from this repository to:
+   `Win64\Mods\StrayMenuLoop\Scripts\main.lua`
+3. Open your `mods.txt` file and add the following line:
+   `StrayMenuLoop : 1`
+
+---
 
 ## 📥 Downloads (.pak mods)
+
 You can download the two pre-compiled `.pak` archives (background variations with and without the text) in the **[Releases]** section of this repository. 
+
 Place the downloaded `_P.pak` files into your game directory:
 `Stray\HK_project\Content\Paks\~mods\`
 
-## ⚙️ UE4SS Script Installation
-To control the main menu scene (hide UI, reset animations, fix audio loops), you need to install the provided Lua script.
-1. Install **UE4SS** in your `Stray\Hk_project\Binaries\Win64\` directory.
-2. Download the `Scripts\main.lua` file from this repository.
-3. Place it in: `Win64\Mods\StrayMenuLoop\Scripts\main.lua`
-4. Open your `mods.txt` file and add the following line to enable the script:
-   `StrayMenuLoop : 1`
+---
 
-**Usage:** Press `F1` in the main menu to hide the logo/UI and reset the cinematic loop.
+## Credits & Acknowledgments
 
-<hr />
+Huge thanks to the original [Bqrry4/sddm-stray](https://github.com/Bqrry4/sddm-stray) repository for the initial concept of using the Stray menu as a background environment. This project adapts that vision specifically for Windows Desktop and Wallpaper Engine workflows.
 
-## 💡 Quick Tips for Creators
-If you want to record your own custom loops for Wallpaper Engine, keep these tips in mind:
+---
 
-* **Customizing Textures:** To create your own cat variants or alter the neon signs, you'll need standard Unreal Engine 4 modding tools (like FModel to extract `.uasset` files and UnrealPak to repack them).
-* **Recording Quality:** Stray's volumetric lighting and fog look best at extremely high bitrates. When capturing your screen, force the game into 4K and use a high bitrate (80,000+ Kbps) to avoid pixelation in the dark gradients.
-* **The Perfect Loop:** The cinematic camera and cat animations in the main menu take exactly **1 minute and 45 seconds** to loop. Trigger the `F1` script right at the start of your recording to ensure a seamless reset.
+## License
 
-## 🤝 Credits & Acknowledgments
-Huge thanks to the original <a href="https://github.com/Bqrry4/sddm-stray">Bqrry4/sddm-stray</a> repository for the initial concept of using the Stray menu as a background environment. This project adapts that vision specifically for Windows Desktop and Wallpaper Engine workflows.
+This project is licensed under the MIT License - see the LICENSE file for details.
